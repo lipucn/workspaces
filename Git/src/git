@@ -1,0 +1,16 @@
+git init
+git add ./
+git commit -m 注释 /git commit /git commit -a 跳过暂存区,把已经管理的文件直接暂存并提交
+git status
+git diff 查看已修改没暂存的内容
+git diff --cached /--staged 查看已暂存没提交的内容
+删除操作:工作目录删除,版本库还是新增操作,给当前的空目录做快照
+修改文件名:删除一个文件新增一个文件
+git log 查看历史记录 q键退出
+git log --pretty=oneline 显示日志记录在一行/git log --oneline
+//
+linux 命令
+cat 查看文件内容 touch vim
+vim q!强制退出 qw 保存并退出 i 切换为输入模式 esc 退出输入模式 shift+:且换为命令行模式
+rm-文件名:删除文件
+mv fileName newFileName 修改文件名
