@@ -44,6 +44,7 @@
         git log 打印全部日志
         git log --oneline 在一行打印日志(一次提交一行)
         git log --oneline --decorate --graph --all 打印不同分支历史记录
+        git reflog 查看提交信息,包括已经删除的分支的提交信息
         区别
         git diff 查看未暂存文件的修改
         git diff --staged 查看已暂存文件的修改
@@ -59,6 +60,7 @@
         git branch name commithash 在指定提交对象上创建分支
         切换
         git checkout 分支名
+        git checkout -b 分支名 创建并切换到新分支
         修改
         git branch -m oldName newName(本地分之重命名,还未推到远程)
         已经推到远程
@@ -70,3 +72,24 @@
         删除
         git branch -d 分支名 :删除已经合并的分支(删除之前要切换到主分支)
         git branch -D 分支名 :强制删除分支(未合并的分支;删除之前要切换到主分支)
+        合并
+        git merge 分支名(快进合并)
+        典型合并:需要解决冲突
+    git存储
+        git stash list查看存储
+        git stash创建存储(会提交,git log命令看不到提交,我们相当于未提交)
+        进入分支,查看栈力是否有未完成的工作
+        git stash apply 只运用栈顶的元素,不会删除
+        git stash drop 栈顶名字,删除存储的元素
+        git stash pop 应用存储并理科从栈删除它
+### git 后悔药 撤回操作
+        工作区
+        暂存区
+        版本库
+        撤回在工作区的修改(git已托管的文件)
+        git checkout --fileName/git restore fileName
+        撤回暂存
+        git restore --staged fileName
+        撤回提交
+        版本库中不会撤回提交对象,只会重新提交一次.
+        git commit --amend
