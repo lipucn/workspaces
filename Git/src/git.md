@@ -81,7 +81,7 @@
         进入分支,查看栈力是否有未完成的工作
         git stash apply 只运用栈顶的元素,不会删除
         git stash drop 栈顶名字,删除存储的元素
-        git stash pop 应用存储并理科从栈删除它
+        git stash pop 应用存储并立刻从栈删除它
 ### git 后悔药 撤回操作
         工作区
         暂存区
@@ -94,3 +94,10 @@
         版本库中不会撤回提交对象,只会重新提交一次.
         git commit --amend
         git reset命令
+
+
+
+     啊撒健康
+
+        啊哈哈 我学会了 pop 
+
