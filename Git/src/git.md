@@ -93,3 +93,4 @@
         撤回提交
         版本库中不会撤回提交对象,只会重新提交一次.
         git commit --amend
+        git reset命令
