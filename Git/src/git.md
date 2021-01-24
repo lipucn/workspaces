@@ -41,10 +41,10 @@
     R查询
         git status    查询工作区文件状态(已托管:已暂存,已提交,已修改;未托管)
         日志
-        git log 打印全部日志
+        git log 打印全部日志()
         git log --oneline 在一行打印日志(一次提交一行)
         git log --oneline --decorate --graph --all 打印不同分支历史记录
-        git reflog 查看提交信息,包括已经删除的分支的提交信息
+        git reflog 查看提交信息,包括已经删除的分支的提交信息(HEADyoubianhua,就会记录下来)
         区别
         git diff 查看未暂存文件的修改
         git diff --staged 查看已暂存文件的修改
@@ -93,16 +93,31 @@
         撤回提交
         版本库中不会撤回提交对象,只会重新提交一次.
         git commit --amend
-        git reset命令
+### reset
+        第一步
+        git reset --soft HEAD~  只动HEAD(带着分之一起移动,checkout切换分支,不会移动分支), 暂存区和工作目录不变
+        第二部
+        git reset [--mixed] HEAD~动HEAD 和暂存区
+        第三部
+        git reset --hard HEAD~ 全部动  (checkout 切换三个分支都动)
+### checkout reset
+        git checkout commitHash & git reset --hard commitHash
+        checkout只动HEAD--hard动HEAD而且带着分支一起走
+         checkout对工作目录是安全的,--hard强制覆盖目录,工作目录没提交数据无法找回
+### 路径reset
+       git reset HEAD filename(reset会跳过第一步,只动暂存区)|git reset HEAD 不跟文件名,全部改
+        git checkout --filename 只动工作目录
+### 数据恢复
+    时光机 后悔药
+### 打tag 版本 
+    给某一个提交打上tag,
+    列出tag:git tag
+    打tag:git tag commithash
+    查看特定标签 git show tagname
+    删除标签 git tag -d tagname
+    检出标签 git checkout  tagname{造成头部分离;解决办法;创建分支,使HEAD指向新分支),
 
 
-   sllvsicxjczjx
-
-     啊撒健康
 
 
-            啊撒健康
-
-
-        啊哈哈 我学会了 pop 
 
